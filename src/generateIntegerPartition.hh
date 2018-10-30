@@ -2,13 +2,16 @@
 #define TH_GENERATE_INTEGER_PARTITION_GENERATEINTEGERPARTITION_HH
 
 #include <iostream>
+#include <unordered_map>
+#include <algorithm>
 
 namespace thgip {
   class generateIntegerPartition
   {
    private:
-    int 		_number = 0;
-    unsigned long 	_partitionNumber = 0;
+    int 									_number = 0;
+    unsigned long long 								_partitionNumber = 0;
+    std::unordered_multimap<int, std::pair<unsigned int, unsigned long long >>	_cacheRes;
 
    public:
     generateIntegerPartition(int number);
@@ -18,7 +21,7 @@ namespace thgip {
     void 			print();
 
    private:
-    unsigned long computeRec(int n);
+    unsigned long long  computeRec(int number, unsigned int subsetNumber);
   };
 }
 

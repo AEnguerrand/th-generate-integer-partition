@@ -12,5 +12,6 @@ include_directories(src)
 
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.hh)
+file(GLOB_RECURSE HEADER_FILES_PP ${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp)
 
-add_executable(th-generate-integer-partition ${SOURCE_FILES} ${HEADER_FILES})
+add_executable(th-generate-integer-partition ${SOURCE_FILES} ${HEADER_FILES} ${HEADER_FILES_PP})
