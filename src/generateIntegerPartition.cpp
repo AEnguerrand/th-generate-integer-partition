@@ -16,7 +16,7 @@ void thgip::generateIntegerPartition::print()
   std::cout << "Integer partition number of " << _number << " is: " << _partitionNumber << std::endl;
 }
 
-unsigned long long  thgip::generateIntegerPartition::computeRec(int number, unsigned int subsetNumber)
+std::uint64_t thgip::generateIntegerPartition::computeRec(int number, unsigned int subsetNumber)
 {
   if (number == 0)
     return 1;
@@ -28,7 +28,7 @@ unsigned long long  thgip::generateIntegerPartition::computeRec(int number, unsi
       if (it->second.first == subsetNumber)
         return it->second.second;
     }
-  unsigned long long  tmp = computeRec(number, subsetNumber - 1) + computeRec(number - subsetNumber, subsetNumber);
+  std::uint64_t tmp = computeRec(number, subsetNumber - 1) + computeRec(number - subsetNumber, subsetNumber);
   _cacheRes.insert(std::make_pair(number, std::make_pair(subsetNumber, tmp)));
   return tmp;
 }

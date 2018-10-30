@@ -10,18 +10,18 @@ namespace thgip {
   {
    private:
     int 									_number = 0;
-    unsigned long long 								_partitionNumber = 0;
-    std::unordered_multimap<int, std::pair<unsigned int, unsigned long long >>	_cacheRes;
+    std::uint64_t _partitionNumber = 0;
+    std::unordered_multimap<int, std::pair<unsigned int, std::uint64_t >> _cacheRes;
 
    public:
-    generateIntegerPartition(int number);
+    explicit generateIntegerPartition(int number);
 
    public:
     generateIntegerPartition&	compute();
     void 			print();
 
    private:
-    unsigned long long  computeRec(int number, unsigned int subsetNumber);
+    std::uint64_t computeRec(int number, unsigned int subsetNumber);
   };
 }
 
