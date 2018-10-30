@@ -3,8 +3,8 @@ Tsinghua Project - Generate the integer partition of number p(n)
 
 ## Dependencies
 
-C++ 14 Compiler
-CMake (>= 3.5)
+- C++ 14 Compiler
+- CMake (>= 3.5)
 
 ## Build and run
 ### Linux or MacOs
