@@ -7,6 +7,11 @@ thgip::generateIntegerPartition::generateIntegerPartition(int number) :
 
 thgip::generateIntegerPartition &thgip::generateIntegerPartition::compute()
 {
+  if (_number == 0)
+    {
+      _partitionNumber = 1;
+      return *this;
+    }
   _partitionNumber = computeRec(_number, _number - static_cast<unsigned int>(1)) + 1;
   return *this;
 }
@@ -24,9 +29,10 @@ std::uint64_t thgip::generateIntegerPartition::computeRec(int number, unsigned i
     return 0;
 
   auto searchIt = _cacheRes.equal_range(number);
-  for (auto it = searchIt.first; it != searchIt.second; ++it) {
+  for (auto it = searchIt.first; it != searchIt.second; ++it)
+    {
       if (it->second.first == subsetNumber)
-        return it->second.second;
+	return it->second.second;
     }
   std::uint64_t tmp = computeRec(number, subsetNumber - 1) + computeRec(number - subsetNumber, subsetNumber);
   _cacheRes.insert(std::make_pair(number, std::make_pair(subsetNumber, tmp)));
