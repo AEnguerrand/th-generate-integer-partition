@@ -1,2 +1,2 @@
 language: cpp
-script: mkdir build && cd build && cmake .. && cmake --build . && ./th-integer-partition 5 && ./th-integer-partition 200
+script: mkdir build && cd build && cmake .. && cmake --build . && ./th-generate-integer-partition 5 && ./th-generate-integer-partition 200 && ../generate_200.sh ./th-generate-integer-partition
