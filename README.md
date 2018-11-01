@@ -1,5 +1,5 @@
 # th-generate-integer-partition
-[![Build Status](https://www.travis-ci.com/AEnguerrand/th-securitytest-android.svg?branch=master)](https://www.travis-ci.com/AEnguerrand/th-securitytest-android)
+[![Build Status](https://www.travis-ci.com/AEnguerrand/th-generate-integer-partition.svg?branch=master)](https://www.travis-ci.com/AEnguerrand/th-generate-integer-partition)
 ![CPP](https://img.shields.io/badge/C++-14-blue.svg)
 
 
