@@ -1,0 +1,2 @@
+language: cpp
+script: mkdir build && cd build && cmake .. && cmake --build . && ./th-integer-partition 5 && ./th-integer-partition 200
