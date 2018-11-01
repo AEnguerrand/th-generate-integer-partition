@@ -1,4 +1,8 @@
 # th-generate-integer-partition
+[![Build Status](https://www.travis-ci.com/AEnguerrand/th-securitytest-android.svg?branch=master)](https://www.travis-ci.com/AEnguerrand/th-securitytest-android)
+![CPP](https://img.shields.io/badge/C++-14-blue.svg)
+
+
 Tsinghua Project - Generate the integer partition of number p(n)
 
 ## Dependencies
